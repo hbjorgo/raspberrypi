@@ -1,10 +1,10 @@
 #!/bin/bash
 
-echo Updating installed software...
+echo "Updating installed software..."
 apt-get update
 apt-get upgrade
-echo Done
+echo "Done"
 
-echo Please enter new hostname:
+echo "Please enter new hostname:"
 read -p 'Hostname: ' hostnamevar
-echo Hostname set to $hostnamevar
+echo "Hostname set to $hostnamevar"
