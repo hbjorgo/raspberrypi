@@ -24,7 +24,7 @@ else
 fi
 
 ### Update ###
-read -p "Do you want to set hostname? [y/n]? " prompt
+read -p "Do you want to update installed software? [y/n]? " prompt
 if [[ $prompt =~ [yY] ]]
 then
     echo "Updating installed software..."
