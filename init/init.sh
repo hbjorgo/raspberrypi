@@ -24,9 +24,8 @@ echo "Done"
 read -p "Do you want to reboot? [y/n]? " prompt
 if [[ $prompt =~ [yY] ]]
 then
-    shutdownWaitTime = 1
-    echo "Shutting down in $shutdownWaitTime minute(s)"
-    shutdown -r +$shutdownWaitTime
+    echo "Shutting down..."
+    shutdown -r now
 else
     echo "Done"
 fi
