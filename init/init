@@ -1,8 +1,8 @@
 #!/bin/bash
 
 echo Updating installed software...
-sudo apt-get update
-sudo apt-get upgrade
+apt-get update
+apt-get upgrade
 echo Done.
 
 echo Please enter new hostname:
