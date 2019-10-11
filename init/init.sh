@@ -15,4 +15,12 @@ source ./update.sh
 echo "Done"
 
 ### Reboot ###
-shutdown -r 15
+read -p "Do you want to reboot? [y/n]? " prompt
+if [[ $prompt =~ [yY] ]]
+then
+    shutdownWaitTime = 1
+    echo "Shutting down in $shutdownWaitTime minute(s)"
+    shutdown -r +$shutdownWaitTime
+else
+    echo "Done"
+fi
