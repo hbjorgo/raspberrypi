@@ -2,7 +2,7 @@
 
 echo "Updating installed software..."
 apt-get update
-apt-get upgrade
+apt-get upgrade -y
 echo "Done"
 echo "Please enter new hostname:"
 read -p 'Hostname: ' hostnamevar
