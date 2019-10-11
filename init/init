@@ -1,2 +1,10 @@
+#!/bin/bash
+
+echo Updating installed software...
 sudo apt-get update
 sudo apt-get upgrade
+echo Done.
+
+echo Please enter new hostname:
+read -p 'Hostname: ' hostnamevar
+echo Hostname set to $hostnamevar
