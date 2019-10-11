@@ -1,5 +1,14 @@
 #!/bin/bash
 
+### Password ###
+read -p "Do you want to change password? [y/n]? " prompt
+if [[ $prompt =~ [yY] ]]
+then
+    passwd
+else
+    echo "Skipped changing password"
+fi
+
 ### Hostname ###
 read -p "Do you want to set hostname? [y/n]? " prompt
 if [[ $prompt =~ [yY] ]]
@@ -15,10 +24,16 @@ else
 fi
 
 ### Update ###
-echo "Updating installed software..."
-apt-get update
-apt-get -y upgrade
-echo "Done"
+read -p "Do you want to set hostname? [y/n]? " prompt
+if [[ $prompt =~ [yY] ]]
+then
+    echo "Updating installed software..."
+    apt-get update
+    apt-get -y upgrade
+    echo "Done"
+else
+    echo "Skipped updating"
+fi
 
 ### Reboot ###
 read -p "Do you want to reboot? [y/n]? " prompt
@@ -27,5 +42,5 @@ then
     echo "Shutting down..."
     shutdown -r now
 else
-    echo "Done"
+    echo "Skipped rebooting"
 fi
