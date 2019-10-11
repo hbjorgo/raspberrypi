@@ -10,8 +10,5 @@ echo "password_file /etc/mosquitto/users" | tee -a /etc/mosquitto/conf.d/custom.
 ### Create username and password file ###
 mosquitto_passwd -c /etc/mosquitto/users mqttbroker
 
-### Enable broker ###
-systemctl enable mosquitto
-
-### Check broker status ###
-systemctl status mosquitto
+### Run onbackground as a daemon ###
+mosquitto -d
