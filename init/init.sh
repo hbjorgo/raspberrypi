@@ -7,6 +7,7 @@ then
     read -p "Please enter new hostname: " hostnamevar
     hostname $hostnamevar
     echo "Hostname set to $hostnamevar"
+else
 fi
 
 ### Update ###
